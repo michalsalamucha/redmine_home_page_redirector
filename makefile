@@ -1,4 +1,7 @@
-run: run-redmine-4
+run: run-redmine-5
+
+run-redmine-5:
+ docker run --rm -it -v "$(shell pwd)":/usr/src/redmine/plugins/redmine_home_to_my_page:ro -p 8000:3000 redmine:5
 	
 run-redmine-4:
 	docker run --rm -it -v "$(shell pwd)":/usr/src/redmine/plugins/redmine_home_to_my_page:ro -p 8000:3000  redmine:4
